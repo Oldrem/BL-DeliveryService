@@ -1,5 +1,7 @@
 package app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -52,6 +54,7 @@ public class Courier
         this.available = available;
     }
 
+    @JsonIgnore
     public List<DeliveryRequest> getRequests() {
         return requests;
     }
